@@ -2,7 +2,6 @@ import java.util.Random;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.Arrays;
 
 public class Tester
 {
@@ -110,7 +109,7 @@ public class Tester
 		Random rand = new Random();
 		int[] result = new int[length];
 		for(int i = 0; i < length; i++)
-			result[i] = rand.nextInt(50)-50/2;
+			result[i] = rand.nextInt()-Integer.MAX_VALUE/2;
 		return result;
 	}
 

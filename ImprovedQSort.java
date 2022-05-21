@@ -5,21 +5,21 @@ public class ImprovedQSort
 {
 	public static void sort(int[] arr) {qSort(arr,0,arr.length-1);}
 
-	private static void qSort(int[] arr, int start, int end)
+	private static void qSort(int[] arr, int l, int r)
 	{
-		if(start < end)
+		if(l < r)
 		{
-			int[] indices = partition(arr, start, end);
+			int[] indices = partition(arr, l, r);
 
-			qSort(arr,start,indices[0]); // Sort left side
+			qSort(arr,l,indices[0]-1); // Sort left side
+			qSort(arr,indices[1]+1,r);   // Sort right side
 			qSort(arr,indices[0]+1,indices[1]-1); // Sort middle
-			qSort(arr,indices[1],end);   // Sort right side
 		}
 	}
 
 	/*
 	Index is used to keep track of middle index since the location of the index will shift
-	Continuosly swap data on left or right side of pivot location until all data is sorted
+	Continuously swap data on left or right side of pivot location until all data is sorted
 	Then return to main recursive function with index of mid point and sort for left and right sides
 	*/
 	private static int[] partition(int[] arr, int low, int high)
@@ -28,15 +28,21 @@ public class ImprovedQSort
 			swap(arr,low,high);
 
 		int lowVal = arr[low], highVal = arr[high], lowIndex = low, highIndex = high;
-
-		for(int i = low+1; i < high; i++)
+		
+		for(int i = lowIndex+1; i < highIndex; i++)
 		{
-			if(i == highIndex) 
-				return new int[]{lowIndex,highIndex};
-			if(arr[i] < lowVal)
-				swap(arr,i,lowIndex++);
-			else if(arr[i] > highVal)
-				swap(arr,i,highIndex--);
+			if(arr[i] <= lowVal)
+			{
+				lowIndex++;
+				swap(arr,i,lowIndex);
+				swap(arr,lowIndex,lowIndex-1);
+			}
+			else if(arr[i] >= highVal)
+			{
+				highIndex--;
+				swap(arr,i,highIndex+1);
+				swap(arr,i,highIndex);
+			}
 		}
 		return new int[]{lowIndex,highIndex};
 	}
