@@ -1,3 +1,4 @@
+// Used to character values
 public class CompareStrings
 {
 	public static int compare(String first, String second)

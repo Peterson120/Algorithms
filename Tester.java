@@ -17,7 +17,7 @@ public class Tester
 		
 		/*iArr = putVal();
 		start = System.nanoTime();
-		PogoSort.sort(iArr);
+		BogoSort.sort(iArr);
 		end = System.nanoTime();
 		// System.out.println(Arrays.toString(iArr));
 		System.out.println("Pogosort took " + (end-start)/1000 + " microseconds");
