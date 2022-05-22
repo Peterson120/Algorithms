@@ -78,7 +78,17 @@ public class Tester
 		end = System.nanoTime();
 		long q = end-start;
 		// System.out.println(Arrays.toString(iArr));
-		System.out.println("QuickSort took " + (end-start) + " nanoseconds" + sorted(iArr) + "\n");
+		System.out.println("Dual Pivot QuickSort took " + (end-start) + " nanoseconds" + sorted(iArr) + "\n");
+
+		QuickSort.sort(new int[]{0});
+
+		iArr = putVal();
+		start = System.nanoTime();
+		QuickSort.sort(iArr);
+		end = System.nanoTime();
+		long quick = end - start;
+		// System.out.println(Arrays.toString(iArr));
+		System.out.println("Single Pivot Quick Sort " + quick + " nanoseconds" + sorted(iArr) + "\n");
 
 		ImprovedTSort.sort(new int[]{0});
 
@@ -91,16 +101,18 @@ public class Tester
 		System.out.println("TimSort took " + (end-start) + " nanoseconds" + sorted(iArr) + "\n");
 
 		System.out.print("Slowest: ");
-		if(i > m && i > in && i > q) 		System.out.println("TimSort");
-		else if(in > m && in > q && in > i) System.out.println("InsertionSort");
-		else if(q > m && q > in && q > i) 	System.out.println("QuickSort");
-		else								System.out.println("MergeSort");
+		if(i > m && i > in && i > q && i > quick) 					System.out.println("TimSort");
+		else if(in > m && in > q && in > i && in > quick) 			System.out.println("InsertionSort");
+		else if(q > m && q > in && q > i && q > quick) 				System.out.println("Dual Pivot QuickSort");
+		else if(quick > m && quick > q && quick > in && quick > i) 	System.out.println("Single Pivot Quick Sort");
+		else														System.out.println("MergeSort");
 
 		System.out.print("Fastest: ");
-		if(i < m && i < in && i < q) 		System.out.println("TimSort");
-		else if(in < m && in < q && in < i)	System.out.println("InsertionSort");
-		else if(q < m && q < in && q < i) 	System.out.println("QuickSort");
-		else 								System.out.println("MergeSort");
+		if(i < m && i < in && i < q && i < quick) 					System.out.println("TimSort");
+		else if(in < m && in < q && in < i && in < quick)			System.out.println("InsertionSort");
+		else if(q < m && q < in && q < i && q < quick) 				System.out.println("QuickSort");
+		else if(quick < m && quick < q && quick < in && quick < i)	System.out.println("Single Pivot QuickSort");
+		else 														System.out.println("MergeSort");
 
 		QuickSelect.quickSelect(new int[]{0,2}, 0, 1, 1);
 		iArr = putVal();
