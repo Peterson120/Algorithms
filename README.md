@@ -27,6 +27,6 @@ BogoSort is the best sorting algorithm ever! Use when possible
 <h2>Run Code</h2>
 Clone the code to your local machine<br />
 Then Run
-         ```java 
+```
          javac *.java && java Tester
-         ```
+```
