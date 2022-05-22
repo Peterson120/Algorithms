@@ -1,6 +1,5 @@
 /*
 A Dual Pivot QuickSort Algorithm
-
 */
 public class DualPivotQSort 
 {
