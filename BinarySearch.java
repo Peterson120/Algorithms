@@ -5,8 +5,8 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-/**
-Must be sorted prior to calling BinarySearch
+/*
+* Must be sorted prior to calling BinarySearch
 */
 
 public class BinarySearch
