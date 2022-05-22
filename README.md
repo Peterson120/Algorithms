@@ -10,4 +10,4 @@ Quick note: It is not recommended to use string sorting if time or space is impo
 <br></br>
 (Unfinished): Algorithm is in progress
 <br></br>
-PogoSort is the best sorting algorithm ever! Use when possible
+BogoSort is the best sorting algorithm ever! Use when possible
