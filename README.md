@@ -25,6 +25,6 @@ Tester is the main driver code
 BogoSort is the best sorting algorithm ever! Use when possible
 
 <h2>Run Code</h2>
-Clone the code to your local machine
-Then Run 
-   javac *.java && java Tester
+Clone the code to your local machine.<n>
+Then Run
+         javac *.java && java Tester
