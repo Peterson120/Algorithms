@@ -28,6 +28,4 @@ BogoSort is the best sorting algorithm ever! Use when possible
 Clone the code to your local machine<br />
 Then Run
 
-<pre><code>
-javac *.java && java Tester
-</code></pre>
+<pre><code>javac *.java && java Tester</code></pre>
