@@ -5,10 +5,31 @@ Time complexity for QuickSelect is O(nlogn) while Binary Search has O(logn)
 
 public class QuickSelect 
 {
+    private static void swap(int[] arr, int i1, int i2)
+    {
+      int temp = arr[i1];
+      arr[i1] = arr[i2];
+      arr[i2] = temp;
+    }
+
     private static int pivot(int[] arr,int low,int high)
     {
-        int pivot = arr[high], pivotloc = low;
-		return 1;
+      int pivot = arr[high], loc = low;
+      for(int i = low; i <= high; i++)
+      {
+        if(arr[i] < pivot)
+        {
+          swap(arr,i,loc);
+          loc++;
+        }
+        else if(arr[i] > pivot)
+        {
+          swap(arr,high,i);
+          high--;
+        }
+      }
+      swap(arr,high,loc);
+		  return loc;
     }
 
     /**
@@ -19,6 +40,12 @@ public class QuickSelect
      */
     public static int quickSelect(int[] arr,int low,int high, int n)
     {
-		return 1;
+		  int partition = pivot(arr,low,high);
+      if(partition == n-1)
+        return arr[partition];
+      else if(partition < n-1)
+        return quickSelect(arr,partition+1,high,n);
+      else 
+        return quickSelect(arr,low,partition-1,n);
     }
 }

@@ -5,23 +5,22 @@ import java.io.IOException;
 
 public class Tester
 {
-	private static int length;
+	private static int LENGTH;
 
 	public static void main(String[] args) throws IOException
 	{
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		System.out.print("Enter an array length: ");
-		length = Integer.valueOf(br.readLine());
-		br.close();
+		LENGTH = Integer.valueOf(br.readLine());
 		int[] iArr;
 		long start, end;
 		
 		/*iArr = putVal();
 		start = System.nanoTime();
-		//PogoSort.sort(iArr);
+		PogoSort.sort(iArr);
 		end = System.nanoTime();
-		//System.out.println(Arrays.toString(iArr));
-		//System.out.println("Pogosort took " + (end-start)/1000 + " microseconds");
+		// System.out.println(Arrays.toString(iArr));
+		System.out.println("Pogosort took " + (end-start)/1000 + " microseconds");
 		*/
 
 		InsertionSort.sort(new int[]{0});
@@ -102,13 +101,23 @@ public class Tester
 		else if(in < m && in < q && in < i)	System.out.println("InsertionSort");
 		else if(q < m && q < in && q < i) 	System.out.println("QuickSort");
 		else 								System.out.println("MergeSort");
+
+		QuickSelect.quickSelect(new int[]{0,2}, 0, 1, 1);
+		iArr = putVal();
+		System.out.println("\nEnter the nth smallest element: ");
+		int loc = Integer.valueOf(br.readLine());
+		br.close();
+		start = System.nanoTime();
+		int num = QuickSelect.quickSelect(iArr,0,LENGTH -1,loc);
+		end = System.nanoTime();
+		System.out.println("\nThe nth smallest element is " + num + ". It took " + (end-start) + " nanoseconds to complete.");
 	}
 
 	private static int[] putVal()
 	{
 		Random rand = new Random();
-		int[] result = new int[length];
-		for(int i = 0; i < length; i++)
+		int[] result = new int[LENGTH];
+		for(int i = 0; i < LENGTH; i++)
 			result[i] = rand.nextInt(20)-20/2;
 		return result;
 	}
@@ -123,12 +132,12 @@ public class Tester
 		return "\nTest passed: true";
 	}
 
-	private static String rSorted(int[] arr)
+	/* private static String rSorted(int[] arr)
 	{
 		for(int i = 0; i < arr.length-1; i++)
 		{
 			if(arr[i] < arr[i+1]) return "\nTest passed: false";
 		}
 		return "\nTest passed: true";
-	}
+	} */
 }
