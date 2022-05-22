@@ -6,7 +6,15 @@ Quick note: It is not recommended to use string sorting if time or space is impo
 <h3>Legend</h3>
 (Finished): Completely Finished Package with support for arrays and lists
 <br></br>
-(Finished int[]): Finished algorithm for int arrays
+(int[]): Finished int arrays
+<br></br>
+(char[]): Finished char arrays
+<br></br>
+(String[]): Finished string arrays
+<br></br>
+(long[]): Finished long arrays
+<br></br>
+(short[]): Finished short arrays
 <br></br>
 (Unfinished): Algorithm is in progress
 <br></br>
