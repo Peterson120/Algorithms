@@ -1,3 +1,4 @@
+// Single Pivot QuickSort
 public class QuickSort 
 {
 	public static void sort(int[] arr) {qSort(arr,0,arr.length-1,false);}
