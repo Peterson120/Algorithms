@@ -1,4 +1,4 @@
-/* Original TimSort.java with improvements to InsertionSort and MergeSort*/
+/* Original TimSort.java without reverse sorting*/
 public class ImprovedTSort
 {
 	final static int MAX_MERGE = 63;
