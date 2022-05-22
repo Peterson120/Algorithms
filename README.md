@@ -5,21 +5,21 @@ Quick note: It is not recommended to use string sorting if time or space is impo
 
 <h3>Legend</h3>
 (Finished): Completely Finished Package with support for arrays and lists
-<br></br>
+<br />
 (int[]): Finished int arrays
-<br></br>
+<br />
 (char[]): Finished char arrays
-<br></br>
+<br />
 (String[]): Finished string arrays
-<br></br>
+<br />
 (long[]): Finished long arrays
-<br></br>
+<br />
 (short[]): Finished short arrays
-<br></br>
+<br />
 (Unfinished): Algorithm is in progress
 <br></br>
 CompareStrings is used to map characters to values for String comparisons
-<br></br>
+<br />
 Tester is the main driver code
 <br></br>
 BogoSort is the best sorting algorithm ever! Use when possible
@@ -27,6 +27,7 @@ BogoSort is the best sorting algorithm ever! Use when possible
 <h2>Run Code</h2>
 Clone the code to your local machine<br />
 Then Run
-```
-         javac *.java && java Tester
-```
+
+<pre><code>
+javac *.java && java Tester
+</code></pre>
