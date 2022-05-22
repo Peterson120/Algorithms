@@ -1,7 +1,7 @@
 /*
 A Dual Pivot QuickSort Algorithm
 */
-public class ImprovedQSort 
+public class DualPivotQSort 
 {
 	public static void sort(int[] arr) {qSort(arr,0,arr.length-1);}
 

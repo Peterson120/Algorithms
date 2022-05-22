@@ -70,11 +70,11 @@ public class Tester
 		System.out.println("Reverse BubbleSort took " + (end-start) + " nanoseconds" + rSorted(iArr) + "\n");
 		*/
 
-		ImprovedQSort.sort(new int[]{0});
+		DualPivotQSort.sort(new int[]{0});
 
 		iArr = putVal();
 		start = System.nanoTime();
-		ImprovedQSort.sort(iArr);
+		DualPivotQSort.sort(iArr);
 		end = System.nanoTime();
 		long q = end-start;
 		// System.out.println(Arrays.toString(iArr));
