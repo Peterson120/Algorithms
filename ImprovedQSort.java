@@ -1,7 +1,6 @@
 /*
 A Dual Pivot QuickSort Algorithm
 */
-import java.util.Arrays;
 public class ImprovedQSort 
 {
 	public static void sort(int[] arr) {qSort(arr,0,arr.length-1);}
@@ -41,7 +40,7 @@ public class ImprovedQSort
 			{
 				while (arr[highIndex] > highVal && i < highIndex)
                 	highIndex--;
-					
+
 				swap(arr,i,highIndex);
 				highIndex--;
 
