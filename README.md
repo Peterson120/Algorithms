@@ -5,5 +5,7 @@ Quick note: It is not recommended to use string sorting if time or space is impo
 
 <h3>Legend</h3>
 (Finished): Completely Finished Package with support for arrays and lists
+<br></br>
 (Finished int[]): Finished algorithm for int arrays
+<br></br>
 (Unfinished): Algorithm is in progress
