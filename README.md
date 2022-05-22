@@ -9,3 +9,5 @@ Quick note: It is not recommended to use string sorting if time or space is impo
 (Finished int[]): Finished algorithm for int arrays
 <br></br>
 (Unfinished): Algorithm is in progress
+<br></br>
+BogoSort is the best sorting algorithm ever! Use when possible
