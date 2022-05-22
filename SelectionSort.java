@@ -1,3 +1,4 @@
+// SelectionSort
 public class SelectionSort
 {
 	public static void sort(int[] arr) 				{sSort(arr,0,arr.length-1,false);}
