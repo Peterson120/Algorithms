@@ -3,6 +3,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
 
+// Used to Test Algorithms
 public class Tester
 {
 	private static int LENGTH;
