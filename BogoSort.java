@@ -1,5 +1,5 @@
 import java.util.Random;
-public class PogoSort
+public class BogoSort
 {
 	public static void sort(int[] arr)
 	{
