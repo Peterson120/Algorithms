@@ -21,8 +21,6 @@ Quick note: It is not recommended to use string sorting if time or space is impo
 CompareStrings is used to map characters to values for String comparisons
 <br />
 Tester is the main driver code
-<br></br>
-BogoSort is the best sorting algorithm ever! Use when possible
 
 <h2>Run Code</h2>
 Clone the code to your local machine<br />
